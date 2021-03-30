@@ -1,0 +1,2626 @@
+2019/06/17 08:48:11 [INFO] Terraform version: 0.11.13  
+2019/06/17 08:48:11 [INFO] Go runtime version: go1.11.5
+2019/06/17 08:48:11 [INFO] CLI args: []string{"C:\\terraform\\Creation_Istance_2Volume_ElasticIP_SecurityGroup\\terraform.exe", "apply"}
+2019/06/17 08:48:11 [DEBUG] Attempting to open CLI config file: \\NETKOMAD213\RDS_Profiles$\mba\AppData\Roaming\terraform.rc
+2019/06/17 08:48:11 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2019/06/17 08:48:11 [INFO] CLI command args: []string{"apply"}
+2019/06/17 08:48:11 [INFO] command: empty terraform config, returning nil
+2019/06/17 08:48:11 [DEBUG] command: no data state file found for backend config
+2019/06/17 08:48:11 [DEBUG] New state was assigned lineage "085eae8c-b554-9801-599b-081aab654ef5"
+2019/06/17 08:48:11 [INFO] command: backend initialized: <nil>
+2019/06/17 08:48:11 [DEBUG] checking for provider in "."
+2019/06/17 08:48:11 [DEBUG] checking for provider in "C:\\terraform\\Creation_Istance_2Volume_ElasticIP_SecurityGroup"
+2019/06/17 08:48:11 [DEBUG] checking for provider in ".terraform\\plugins\\windows_amd64"
+2019/06/17 08:48:11 [DEBUG] found provider "terraform-provider-aws_v1.31.0_x4.exe"
+2019/06/17 08:48:11 [DEBUG] found valid plugin: "aws", "1.31.0", "C:\\terraform\\Creation_Istance_2Volume_ElasticIP_SecurityGroup\\.terraform\\plugins\\windows_amd64\\terraform-provider-aws_v1.31.0_x4.exe"
+2019/06/17 08:48:11 [DEBUG] checking for provisioner in "."
+2019/06/17 08:48:11 [DEBUG] checking for provisioner in "C:\\terraform\\Creation_Istance_2Volume_ElasticIP_SecurityGroup"
+2019/06/17 08:48:11 [DEBUG] checking for provisioner in ".terraform\\plugins\\windows_amd64"
+2019/06/17 08:48:11 [INFO] command: backend <nil> is not enhanced, wrapping in local
+2019/06/17 08:48:11 [INFO] backend/local: starting Apply operation
+2019/06/17 08:48:11 [TRACE] Preserving existing state lineage "44047f08-facf-5193-c01a-2e263ed3aae0"
+2019/06/17 08:48:11 [TRACE] Preserving existing state lineage "44047f08-facf-5193-c01a-2e263ed3aae0"
+2019/06/17 08:48:11 [INFO] terraform: building graph: GraphTypeInput
+2019/06/17 08:48:11 [TRACE] ConfigTransformer: Starting for path: []
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_eip.default
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"aws_eip", RawCount:(*config.RawConfig)(0xc000424230), RawConfig:(*config.RawConfig)(0xc000424150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_volume_attachment.ebs_att
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ebs_att", Type:"aws_volume_attachment", RawCount:(*config.RawConfig)(0xc000424310), RawConfig:(*config.RawConfig)(0xc0004242a0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_instance.ec2_instance
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ec2_instance", Type:"aws_instance", RawCount:(*config.RawConfig)(0xc000424620), RawConfig:(*config.RawConfig)(0xc0004243f0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_ebs_volume.example
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"example", Type:"aws_ebs_volume", RawCount:(*config.RawConfig)(0xc00010e070), RawConfig:(*config.RawConfig)(0xc000424700), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_volume_attachment.ebs_att": &terraform.ResourceState{Type:"aws_volume_attachment", Dependencies:[]string{"aws_ebs_volume.example", "aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b180), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_instance.ec2_instance": &terraform.ResourceState{Type:"aws_instance", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048b0e0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_ebs_volume.example": &terraform.ResourceState{Type:"aws_ebs_volume", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048aff0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_eip.default": &terraform.ResourceState{Type:"aws_eip", Dependencies:[]string{"aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b040), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/06/17 08:48:11 [TRACE] Attach provider request: []string{} aws
+2019/06/17 08:48:11 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"=1.31.0", RawConfig:(*config.RawConfig)(0xc0003eef50)}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+aws_eip.default - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] resource aws_instance.ec2_instance using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_volume_attachment.ebs_att using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_ebs_volume.example using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_eip.default using provider provider.aws
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_eip.default" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "output.elastic ip" references: [aws_eip.default]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.NameVolume" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.secret_key var.ncloud_ip var.access_key]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_instance.ec2_instance" references: [var.NameInstance var.ami_image var.instance_number var.instance_type var.key_name]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "output.Name Instance" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.NameInstance" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.access_key" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.ami_image" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.key_name" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.instance_number" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_volume_attachment.ebs_att" references: [aws_ebs_volume.example aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_ebs_volume.example" references: [var.NameVolume var.size]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.secret_key" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.ncloud_ip" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.size" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.availability_zone" references: []
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_ebs_volume.example - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+aws_instance.ec2_instance - *terraform.NodeAbstractResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  aws_ebs_volume.example - *terraform.NodeAbstractResource
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  var.availability_zone - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeAbstractResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeAbstractResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_eip.default - *terraform.NodeAbstractResource
+  aws_volume_attachment.ebs_att - *terraform.NodeAbstractResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] Starting graph walk: walkInput
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.ami_image"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.key_name"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.size"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "output.elastic ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "output.Name Instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.secret_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.access_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.instance_number"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "root"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "output.elastic ip" waiting on "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.key_name"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "output.elastic ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.secret_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.size"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.ami_image"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_eip.default" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "output.Name Instance" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "output.Name Instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_number"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_type"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.access_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_ebs_volume.example", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_eip.default", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "output.Name Instance", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "output.elastic ip", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_instance.ec2_instance", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_volume_attachment.ebs_att", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.ncloud_ip': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.key_name"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.key_name': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.size"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.size': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.NameVolume': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.NameInstance': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.instance_type"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.instance_type': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.availability_zone': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.ami_image"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.ami_image': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.secret_key"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.secret_key': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.access_key"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.access_key': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.instance_number"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.instance_number': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "provider.aws"
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws': evaluating
+2019/06/17 08:48:11 [TRACE] [walkInput] Entering eval tree: provider.aws
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalInitProvider
+2019-06-17T08:48:11.870+0200 [DEBUG] plugin: starting plugin: path=C:\terraform\Creation_Istance_2Volume_ElasticIP_SecurityGroup\.terraform\plugins\windows_amd64\terraform-provider-aws_v1.31.0_x4.exe args=[C:\terraform\Creation_Istance_2Volume_ElasticIP_SecurityGroup\.terraform\plugins\windows_amd64\terraform-provider-aws_v1.31.0_x4.exe]
+2019-06-17T08:48:11.881+0200 [DEBUG] plugin: waiting for RPC address: path=C:\terraform\Creation_Istance_2Volume_ElasticIP_SecurityGroup\.terraform\plugins\windows_amd64\terraform-provider-aws_v1.31.0_x4.exe
+2019-06-17T08:48:11.919+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: plugin address: timestamp=2019-06-17T08:48:11.918+0200 address=127.0.0.1:10000 network=tcp
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalInputProvider
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] [walkInput] Exiting eval tree: provider.aws
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] vertex 'root.aws_instance.ec2_instance': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] vertex 'root.aws_ebs_volume.example': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "output.Name Instance"
+2019/06/17 08:48:11 [TRACE] vertex 'root.output.Name Instance': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] vertex 'root.aws_eip.default': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.output.Name Instance': evaluating
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "output.elastic ip"
+2019/06/17 08:48:11 [TRACE] vertex 'root.output.elastic ip': walking
+2019/06/17 08:48:11 [TRACE] [walkInput] Entering eval tree: output.Name Instance
+2019/06/17 08:48:11 [TRACE] vertex 'root.output.elastic ip': evaluating
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalWriteOutput
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "provider.aws (close)"
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws (close)': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2019/06/17 08:48:11 [TRACE] [walkInput] Entering eval tree: output.elastic ip
+2019/06/17 08:48:11 [TRACE] [walkInput] Entering eval tree: provider.aws (close)
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalCloseProvider
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalWriteOutput
+2019/06/17 08:48:11 [TRACE] [walkInput] Exiting eval tree: provider.aws (close)
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] [walkInput] Exiting eval tree: output.Name Instance
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] [walkInput] Exiting eval tree: output.elastic ip
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:11 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2019/06/17 08:48:11 [TRACE] [walkInput] Entering eval tree: meta.count-boundary (count boundary fixup)
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/06/17 08:48:11 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_eip.default.0", replace "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_instance.ec2_instance.0", replace "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_volume_attachment.ebs_att.0", replace "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_ebs_volume.example.0", replace "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] [walkInput] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "root"
+2019/06/17 08:48:11 [TRACE] vertex 'root.root': walking
+2019/06/17 08:48:11 [INFO] terraform: building graph: GraphTypeValidate
+2019/06/17 08:48:11 [TRACE] ConfigTransformer: Starting for path: []
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.OrphanOutputTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_eip.default
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"aws_eip", RawCount:(*config.RawConfig)(0xc000424230), RawConfig:(*config.RawConfig)(0xc000424150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_volume_attachment.ebs_att
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ebs_att", Type:"aws_volume_attachment", RawCount:(*config.RawConfig)(0xc000424310), RawConfig:(*config.RawConfig)(0xc0004242a0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_instance.ec2_instance
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ec2_instance", Type:"aws_instance", RawCount:(*config.RawConfig)(0xc000424620), RawConfig:(*config.RawConfig)(0xc0004243f0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_ebs_volume.example
+2019/06/17 08:48:11 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"example", Type:"aws_ebs_volume", RawCount:(*config.RawConfig)(0xc00010e070), RawConfig:(*config.RawConfig)(0xc000424700), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_volume_attachment.ebs_att": &terraform.ResourceState{Type:"aws_volume_attachment", Dependencies:[]string{"aws_ebs_volume.example", "aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b180), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_instance.ec2_instance": &terraform.ResourceState{Type:"aws_instance", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048b0e0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_ebs_volume.example": &terraform.ResourceState{Type:"aws_ebs_volume", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048aff0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [DEBUG] Attaching resource state to "aws_eip.default": &terraform.ResourceState{Type:"aws_eip", Dependencies:[]string{"aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b040), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/06/17 08:48:11 [TRACE] Attach provider request: []string{} aws
+2019/06/17 08:48:11 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"=1.31.0", RawConfig:(*config.RawConfig)(0xc0003eef50)}
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+aws_eip.default - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] resource aws_instance.ec2_instance using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_ebs_volume.example using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_volume_attachment.ebs_att using provider provider.aws
+2019/06/17 08:48:11 [DEBUG] resource aws_eip.default using provider provider.aws
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RemovedModuleTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_eip.default" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.ami_image" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.key_name" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.NameInstance" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.access_key var.secret_key var.ncloud_ip]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_instance.ec2_instance" references: [var.NameInstance var.ami_image var.instance_number var.instance_type var.key_name]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.access_key" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.NameVolume" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_ebs_volume.example" references: [var.NameVolume var.size]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.size" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.instance_number" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "aws_volume_attachment.ebs_att" references: [aws_ebs_volume.example aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "output.elastic ip" references: [aws_eip.default]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "output.Name Instance" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.ncloud_ip" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.secret_key" references: []
+2019/06/17 08:48:11 [DEBUG] ReferenceTransformer: "var.availability_zone" references: []
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CountBoundaryTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.NameVolume - *terraform.NodeRootVariable
+  var.access_key - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.availability_zone - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+aws_instance.ec2_instance - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  aws_ebs_volume.example - *terraform.NodeValidatableResource
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  var.availability_zone - *terraform.NodeRootVariable
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeValidatableResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeValidatableResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_eip.default - *terraform.NodeValidatableResource
+  aws_volume_attachment.ebs_att - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (count boundary fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:11 [DEBUG] Starting graph walk: walkValidate
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "output.Name Instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.ami_image"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.instance_number"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "root"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.key_name"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.access_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.secret_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "output.elastic ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "var.size"
+2019/06/17 08:48:11 [TRACE] dag/walk: added new vertex: "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "output.elastic ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.secret_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_eip.default" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "output.Name Instance" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_number"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "output.Name Instance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.key_name"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.access_key"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "output.elastic ip" waiting on "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.ami_image"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_ebs_volume.example"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.size"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "meta.count-boundary (count boundary fixup)" waiting on "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_eip.default"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "provider.aws"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_type"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "output.Name Instance", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_instance.ec2_instance", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_volume_attachment.ebs_att", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_ebs_volume.example", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "output.elastic ip", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (count boundary fixup)", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: dependencies changed for "aws_eip.default", sending new deps
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.access_key"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.access_key': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.ami_image"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.ami_image': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.NameInstance"
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.instance_number"
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.instance_type"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.instance_type': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.size"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.size': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.secret_key"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.secret_key': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.ncloud_ip"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.ncloud_ip': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.availability_zone"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.instance_number': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.availability_zone': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.NameInstance': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "provider.aws"
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.key_name"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.key_name': walking
+2019/06/17 08:48:11 [TRACE] dag/walk: walking "var.NameVolume"
+2019/06/17 08:48:11 [TRACE] vertex 'root.var.NameVolume': walking
+2019/06/17 08:48:11 [TRACE] vertex 'root.provider.aws': evaluating
+2019/06/17 08:48:11 [TRACE] [walkValidate] Entering eval tree: provider.aws
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalInitProvider
+2019/06/17 08:48:11 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/06/17 08:48:11 [TRACE] root: eval: *terraform.EvalValidateProvider
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: provider.aws
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_instance.ec2_instance': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_ebs_volume.example': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_instance.ec2_instance': evaluating
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_ebs_volume.example': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_ebs_volume.example
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_ebs_volume.example
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_ebs_volume.example': expanding/walking dynamic subgraph
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_ebs_volume.example": &terraform.ResourceState{Type:"aws_ebs_volume", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048aff0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_ebs_volume.example" references: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_ebs_volume.example - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_instance.ec2_instance': expanding/walking dynamic subgraph
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_ebs_volume.example': walking
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_ebs_volume.example': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_ebs_volume.example
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_instance.ec2_instance": &terraform.ResourceState{Type:"aws_instance", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc00048b0e0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_instance.ec2_instance" references: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_instance.ec2_instance': walking
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_instance.ec2_instance': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_ebs_volume.example
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "output.Name Instance"
+2019/06/17 08:48:12 [TRACE] vertex 'root.output.Name Instance': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.output.Name Instance': evaluating
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: output.Name Instance
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_volume_attachment.ebs_att
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_eip.default': walking
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalWriteOutput
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_eip.default': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_eip.default
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_volume_attachment.ebs_att
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': expanding/walking dynamic subgraph
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: output.Name Instance
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateCount
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_volume_attachment.ebs_att": &terraform.ResourceState{Type:"aws_volume_attachment", Dependencies:[]string{"aws_ebs_volume.example", "aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b180), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_volume_attachment.ebs_att" references: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_volume_attachment.ebs_att - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': walking
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_eip.default
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_eip.default': expanding/walking dynamic subgraph
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_eip.default - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_volume_attachment.ebs_att': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_volume_attachment.ebs_att
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_eip.default": &terraform.ResourceState{Type:"aws_eip", Dependencies:[]string{"aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc00048b040), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_eip.default - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_eip.default - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_eip.default" references: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_eip.default - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_eip.default - *terraform.NodeValidatableResourceInstance
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_eip.default': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.aws_eip.default': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: aws_eip.default
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResourceSelfRef
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_volume_attachment.ebs_att
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalValidateResource
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: aws_eip.default
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "output.elastic ip"
+2019/06/17 08:48:12 [TRACE] vertex 'root.output.elastic ip': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.output.elastic ip': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: output.elastic ip
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalWriteOutput
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "provider.aws (close)"
+2019/06/17 08:48:12 [TRACE] vertex 'root.provider.aws (close)': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.provider.aws (close)': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: provider.aws (close)
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCloseProvider
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: provider.aws (close)
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: output.elastic ip
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "meta.count-boundary (count boundary fixup)"
+2019/06/17 08:48:12 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.meta.count-boundary (count boundary fixup)': evaluating
+2019/06/17 08:48:12 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (count boundary fixup)
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2019/06/17 08:48:12 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_eip.default.0", replace "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_instance.ec2_instance.0", replace "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_volume_attachment.ebs_att.0", replace "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] EvalCountFixZeroOneBoundaryGlobal: count 1, search "aws_ebs_volume.example.0", replace "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (count boundary fixup)
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "root"
+2019/06/17 08:48:12 [TRACE] vertex 'root.root': walking
+2019/06/17 08:48:12 [INFO] backend/local: apply calling Refresh
+2019/06/17 08:48:12 [INFO] terraform: building graph: GraphTypeRefresh
+2019/06/17 08:48:12 [TRACE] ConfigTransformer: Starting for path: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+2019/06/17 08:48:12 [TRACE] ConfigTransformer: Starting for path: []
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.OrphanResourceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_eip.default": &terraform.ResourceState{Type:"aws_eip", Dependencies:[]string{"aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc000116f50), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_volume_attachment.ebs_att": &terraform.ResourceState{Type:"aws_volume_attachment", Dependencies:[]string{"aws_ebs_volume.example", "aws_instance.ec2_instance"}, Primary:(*terraform.InstanceState)(0xc000116eb0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_instance.ec2_instance": &terraform.ResourceState{Type:"aws_instance", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000116ff0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [DEBUG] Attaching resource state to "aws_ebs_volume.example": &terraform.ResourceState{Type:"aws_ebs_volume", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000116f00), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+2019/06/17 08:48:12 [TRACE] AttachResourceConfigTransformer: Beginning...
+2019/06/17 08:48:12 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_eip.default
+2019/06/17 08:48:12 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"default", Type:"aws_eip", RawCount:(*config.RawConfig)(0xc000424230), RawConfig:(*config.RawConfig)(0xc000424150), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:12 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_volume_attachment.ebs_att
+2019/06/17 08:48:12 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ebs_att", Type:"aws_volume_attachment", RawCount:(*config.RawConfig)(0xc000424310), RawConfig:(*config.RawConfig)(0xc0004242a0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:12 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_instance.ec2_instance
+2019/06/17 08:48:12 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"ec2_instance", Type:"aws_instance", RawCount:(*config.RawConfig)(0xc000424620), RawConfig:(*config.RawConfig)(0xc0004243f0), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:12 [TRACE] AttachResourceConfigTransformer: Attach resource config request: aws_ebs_volume.example
+2019/06/17 08:48:12 [TRACE] Attaching resource config: &config.Resource{Mode:0, Name:"example", Type:"aws_ebs_volume", RawCount:(*config.RawConfig)(0xc00010e070), RawConfig:(*config.RawConfig)(0xc000424700), Provisioners:[]*config.Provisioner(nil), Provider:"", DependsOn:[]string(nil), Lifecycle:config.ResourceLifecycle{CreateBeforeDestroy:false, PreventDestroy:false, IgnoreChanges:[]string(nil)}}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.AttachResourceConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] ProviderConfigTransformer: Starting for path: []
+2019/06/17 08:48:12 [TRACE] Attach provider request: []string{} aws
+2019/06/17 08:48:12 [TRACE] Attaching provider config: *config.ProviderConfig{Name:"aws", Alias:"", Version:"=1.31.0", RawConfig:(*config.RawConfig)(0xc0003eef50)}
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ProviderConfigTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [DEBUG] resource aws_instance.ec2_instance using provider provider.aws
+2019/06/17 08:48:12 [DEBUG] resource aws_ebs_volume.example using provider provider.aws
+2019/06/17 08:48:12 [DEBUG] resource aws_eip.default using provider provider.aws
+2019/06/17 08:48:12 [DEBUG] resource aws_volume_attachment.ebs_att using provider provider.aws
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ParentProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.graphTransformerMulti:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.LocalTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.OutputTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ModuleVariableTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+output.elastic ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.access_key" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.ami_image" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.key_name" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.NameVolume" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_ebs_volume.example" references: [var.NameVolume var.size]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.instance_type" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.availability_zone" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "provider.aws" references: [var.access_key var.secret_key var.ncloud_ip]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "output.elastic ip" references: [aws_eip.default]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_eip.default" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.size" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_volume_attachment.ebs_att" references: [aws_ebs_volume.example aws_instance.ec2_instance]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.ncloud_ip" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.secret_key" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.NameInstance" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "var.instance_number" references: []
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "output.Name Instance" references: [aws_instance.ec2_instance]
+2019/06/17 08:48:12 [DEBUG] ReferenceTransformer: "aws_instance.ec2_instance" references: [var.NameInstance var.ami_image var.instance_number var.instance_type var.key_name]
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+  var.availability_zone - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameVolume - *terraform.NodeRootVariable
+  var.size - *terraform.NodeRootVariable
+aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+  provider.aws - *terraform.NodeApplyableProvider
+  var.NameInstance - *terraform.NodeRootVariable
+  var.ami_image - *terraform.NodeRootVariable
+  var.instance_number - *terraform.NodeRootVariable
+  var.instance_type - *terraform.NodeRootVariable
+  var.key_name - *terraform.NodeRootVariable
+aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+  aws_ebs_volume.example - *terraform.NodeRefreshableManagedResource
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.Name Instance - *terraform.NodeApplyableOutput
+  aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResource
+output.elastic ip - *terraform.NodeApplyableOutput
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+provider.aws - *terraform.NodeApplyableProvider
+  var.access_key - *terraform.NodeRootVariable
+  var.ncloud_ip - *terraform.NodeRootVariable
+  var.secret_key - *terraform.NodeRootVariable
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_eip.default - *terraform.NodeRefreshableManagedResource
+  aws_volume_attachment.ebs_att - *terraform.NodeRefreshableManagedResource
+root - terraform.graphNodeRoot
+  output.Name Instance - *terraform.NodeApplyableOutput
+  output.elastic ip - *terraform.NodeApplyableOutput
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+  var.availability_zone - *terraform.NodeRootVariable
+var.NameInstance - *terraform.NodeRootVariable
+var.NameVolume - *terraform.NodeRootVariable
+var.access_key - *terraform.NodeRootVariable
+var.ami_image - *terraform.NodeRootVariable
+var.availability_zone - *terraform.NodeRootVariable
+var.instance_number - *terraform.NodeRootVariable
+var.instance_type - *terraform.NodeRootVariable
+var.key_name - *terraform.NodeRootVariable
+var.ncloud_ip - *terraform.NodeRootVariable
+var.secret_key - *terraform.NodeRootVariable
+var.size - *terraform.NodeRootVariable
+2019/06/17 08:48:12 [DEBUG] Starting graph walk: walkRefresh
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.secret_key"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.instance_number"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.NameVolume"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "provider.aws"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "output.elastic ip"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "root"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.NameInstance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.ncloud_ip"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.key_name"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.instance_type"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "output.Name Instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.ami_image"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.access_key"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.availability_zone"
+2019/06/17 08:48:12 [TRACE] dag/walk: added new vertex: "var.size"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "root" waiting on "var.availability_zone"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "provider.aws"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.ami_image"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "root" waiting on "output.Name Instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.key_name"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.NameInstance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "provider.aws"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.ncloud_ip"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "output.elastic ip" waiting on "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_type"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_eip.default"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "root" waiting on "output.elastic ip"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_instance.ec2_instance" waiting on "var.instance_number"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.size"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.access_key"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_eip.default" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "output.Name Instance" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_ebs_volume.example" waiting on "var.NameVolume"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_ebs_volume.example"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "aws_volume_attachment.ebs_att" waiting on "aws_instance.ec2_instance"
+2019/06/17 08:48:12 [TRACE] dag/walk: added edge: "provider.aws" waiting on "var.secret_key"
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "aws_volume_attachment.ebs_att", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "aws_ebs_volume.example", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "aws_instance.ec2_instance", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "output.elastic ip", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "provider.aws", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "aws_eip.default", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: dependencies changed for "output.Name Instance", sending new deps
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.instance_type"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.access_key"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.secret_key"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.secret_key': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.ami_image"
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.ncloud_ip"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.ncloud_ip': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.access_key': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.ami_image': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.availability_zone"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.availability_zone': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "provider.aws"
+2019/06/17 08:48:12 [TRACE] vertex 'root.provider.aws': walking
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.instance_type': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.size"
+2019/06/17 08:48:12 [TRACE] vertex 'root.provider.aws': evaluating
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.size': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.NameVolume"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.NameVolume': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.instance_number"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.instance_number': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.key_name"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.key_name': walking
+2019/06/17 08:48:12 [TRACE] dag/walk: walking "var.NameInstance"
+2019/06/17 08:48:12 [TRACE] vertex 'root.var.NameInstance': walking
+2019/06/17 08:48:12 [TRACE] [walkRefresh] Entering eval tree: provider.aws
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInitProvider
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] root: eval: terraform.EvalNoop
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalInterpolateProvider
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalBuildProviderConfig
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalOpFilter
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:12 [TRACE] root: eval: *terraform.EvalConfigProvider
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] No assume_role block read from configuration
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] Building AWS region structure
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] Building AWS auth structure
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] Setting AWS metadata API timeout to 100ms
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] AWS Auth provider used: "StaticProvider"
+2019-06-17T08:48:12.016+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 2019/06/17 08:48:12 [INFO] Initializing DeviceFarm SDK connection
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Exiting eval tree: provider.aws
+2019/06/17 08:48:13 [TRACE] dag/walk: walking "aws_ebs_volume.example"
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_ebs_volume.example': walking
+2019/06/17 08:48:13 [TRACE] dag/walk: walking "aws_instance.ec2_instance"
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_instance.ec2_instance': walking
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_ebs_volume.example': evaluating
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_instance.ec2_instance': evaluating
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Entering eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Entering eval tree: aws_ebs_volume.example
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalInterpolate
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Exiting eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_instance.ec2_instance': expanding/walking dynamic subgraph
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalCountCheckComputed
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalIf
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] OrphanResourceCount: Starting...
+2019/06/17 08:48:13 [TRACE] OrphanResourceCount: Checking: aws_instance.ec2_instance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [DEBUG] Attaching resource state to "aws_instance.ec2_instance": &terraform.ResourceState{Type:"aws_instance", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000116ff0), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [DEBUG] ReferenceTransformer: "aws_instance.ec2_instance" references: []
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_instance.ec2_instance - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] dag/walk: added new vertex: "aws_instance.ec2_instance"
+2019/06/17 08:48:13 [TRACE] dag/walk: walking "aws_instance.ec2_instance"
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_instance.ec2_instance': walking
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_instance.ec2_instance': evaluating
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Exiting eval tree: aws_ebs_volume.example
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_ebs_volume.example': expanding/walking dynamic subgraph
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Entering eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] OrphanResourceCount: Starting...
+2019/06/17 08:48:13 [TRACE] OrphanResourceCount: Checking: aws_ebs_volume.example
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalReadState
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.OrphanResourceCountTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalRefresh
+2019/06/17 08:48:13 [DEBUG] Attaching resource state to "aws_ebs_volume.example": &terraform.ResourceState{Type:"aws_ebs_volume", Dependencies:[]string{}, Primary:(*terraform.InstanceState)(0xc000116f00), Deposed:[]*terraform.InstanceState{}, Provider:"provider.aws", mu:sync.Mutex{state:0, sema:0x0}}
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.AttachStateTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [DEBUG] ReferenceTransformer: "aws_ebs_volume.example" references: []
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.ReferenceTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_ebs_volume.example - *terraform.NodeRefreshableManagedResourceInstance
+2019/06/17 08:48:13 [TRACE] dag/walk: added new vertex: "aws_ebs_volume.example"
+2019/06/17 08:48:13 [TRACE] dag/walk: walking "aws_ebs_volume.example"
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_ebs_volume.example': walking
+2019/06/17 08:48:13 [TRACE] vertex 'root.aws_ebs_volume.example': evaluating
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Entering eval tree: aws_ebs_volume.example
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalSequence
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalGetProvider
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalReadState
+2019/06/17 08:48:13 [TRACE] root: eval: *terraform.EvalRefresh
+2019-06-17T08:48:13.721+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: panic: runtime error: index out of range
+2019-06-17T08:48:13.721+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 
+2019-06-17T08:48:13.721+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: goroutine 16 [running]:
+2019-06-17T08:48:13.721+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: github.com/terraform-providers/terraform-provider-aws/aws.resourceAwsEbsVolumeRead(0xc04288f730, 0x28854c0, 0xc04225e900, 0xc04288f730, 0x0)
+2019-06-17T08:48:13.721+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/aws/resource_aws_ebs_volume.go:246 +0x3cd
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema.(*Resource).Refresh(0xc04230e850, 0xc0424a7c70, 0x28854c0, 0xc04225e900, 0xc042080800, 0x4cff01, 0x23b9960)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema/resource.go:352 +0x16e
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema.(*Provider).Refresh(0xc0421f3570, 0xc0424a7c20, 0xc0424a7c70, 0x18, 0x18, 0xc0424af640)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/helper/schema/provider.go:308 +0xa1
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/plugin.(*ResourceProviderServer).Refresh(0xc0428b8fa0, 0xc042174520, 0xc0421745f0, 0x0, 0x0)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/terraform-providers/terraform-provider-aws/vendor/github.com/hashicorp/terraform/plugin/resource_provider.go:549 +0x55
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: reflect.Value.call(0xc0421e08a0, 0xc0428c26d8, 0x13, 0x2daec1a, 0x4, 0xc042747f18, 0x3, 0x3, 0xc0424ac6c0, 0xc042381000, ...)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/goenv/versions/1.10.3/src/reflect/value.go:447 +0x970
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: reflect.Value.Call(0xc0421e08a0, 0xc0428c26d8, 0x13, 0xc042747f18, 0x3, 0x3, 0xc042747f28, 0x4030c5, 0xc0420364e0)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/goenv/versions/1.10.3/src/reflect/value.go:308 +0xab
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: net/rpc.(*service).call(0xc042039a00, 0xc04229c1e0, 0xc0428d2a08, 0xc0428d2a20, 0xc042190780, 0xc0428b9040, 0x23b9920, 0xc042174520, 0x16, 0x23b9960, ...)
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/goenv/versions/1.10.3/src/net/rpc/server.go:384 +0x155
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: created by net/rpc.(*Server).ServeCodec
+2019-06-17T08:48:13.722+0200 [DEBUG] plugin.terraform-provider-aws_v1.31.0_x4.exe: 	/opt/goenv/versions/1.10.3/src/net/rpc/server.go:480 +0x441
+2019/06/17 08:48:13 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_ebs_volume.example: unexpected EOF
+2019/06/17 08:48:13 [ERROR] root: eval: *terraform.EvalSequence, err: aws_ebs_volume.example: unexpected EOF
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Exiting eval tree: aws_ebs_volume.example
+2019/06/17 08:48:13 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_instance.ec2_instance: unexpected EOF
+2019/06/17 08:48:13 [ERROR] root: eval: *terraform.EvalSequence, err: aws_instance.ec2_instance: unexpected EOF
+2019/06/17 08:48:13 [TRACE] [walkRefresh] Exiting eval tree: aws_instance.ec2_instance
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "aws_eip.default"
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "output.elastic ip"
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "aws_volume_attachment.ebs_att"
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "provider.aws (close)"
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "output.Name Instance"
+2019/06/17 08:48:13 [TRACE] dag/walk: upstream errored, not walking "root"
+2019/06/17 08:48:13 [DEBUG] plugin: waiting for all plugin processes to complete...
+2019-06-17T08:48:13.725+0200 [WARN ] plugin: error closing client during Kill: err="connection is shut down"
+2019-06-17T08:48:13.741+0200 [DEBUG] plugin: plugin process exited: path=C:\terraform\Creation_Istance_2Volume_ElasticIP_SecurityGroup\.terraform\plugins\windows_amd64\terraform-provider-aws_v1.31.0_x4.exe
